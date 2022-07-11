@@ -47,7 +47,6 @@
                     author: author,
                     message: message
                 }
-                renderMessages(messageObject)
                 socket.emit('send-message', messageObject)
             } else {
                 alert('digite um usuário e uma mensagem')

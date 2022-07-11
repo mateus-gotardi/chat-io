@@ -23,7 +23,7 @@ io.on('connection', (socket)=>{
 
     socket.on('send-message', (data)=>{
         messages.push(data)
-        socket.broadcast.emit('received-message', data)
+        io.emit('received-message', data)
     })
 })
 
